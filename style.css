@@ -14,12 +14,17 @@ body {
 /* HEADER CON LOGO Y ESPACIADO PRECISO */
 .header {
     position: relative;
-    background: linear-gradient(145deg, #ff6600 0%, #cc5200 50%, #000000 100%);
+    background: 
+        /* Degradado primero */
+        linear-gradient(145deg, rgba(255, 102, 0, 0.8) 0%, rgba(204, 82, 0, 0.8) 50%, rgba(0, 0, 0, 0.6) 100%),
+        /* Imagen de fondo con opacidad */
+        url('assets/img/IA-scaled.jpg') no-repeat center center/cover;
     color: white;
     padding: 1.5rem 1rem 4rem;
     /* Ajustado para logo */
     text-align: start;
     overflow: hidden;
+    background-size: cover; /* Asegura que la imagen cubra todo el header */
 }
 
 .header-overlay {
@@ -159,6 +164,8 @@ body {
         font-size: 0.9rem;
     }
 }
+
+
 
 .content {
     position: relative;
